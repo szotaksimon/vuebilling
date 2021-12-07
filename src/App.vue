@@ -7,14 +7,25 @@
         <th>Price</th>
         <th>Quantity</th>
         <th>Operations</th>
+        <th>Összérték</th>
       </tr>
       </thead>
       <tbody>
         <tr v-for="row in rows"
-            v-bind:key="row.title">
+            v-bind:key="row.title"
+            v-on:delete-item="deleteRow">
             <td>{{row.title}}</td>
             <td>{{row.price}}</td>
             <td>{{row.quantity}}</td>
+            <td>
+              <button>X</button>
+              <button>Edit</button>
+            </td>
+            <td>{{row.price * row.quantity}}</td>
+        </tr>
+        <tr v-for="row in rows"
+            v-bind:key="row.title">
+            <td></td>
         </tr>
         
       </tbody>
@@ -23,7 +34,6 @@
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
 
 export default {
   name: 'App',
