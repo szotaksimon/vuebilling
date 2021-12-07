@@ -41,7 +41,8 @@ Plusz feladatok
 4. Módosítsd a működést a következőképpen: Amennyiben létező tételt adnak hozzá ár nélkül, akkor a megadott mennyiséggel növeld a már meglévő tételsor mennyiségét. Ár megadásánál írd felül a meglévő sort. (__+2p__)
 
 Értékelés:
-* 0 - 5: 1
+
+* 0 - 5: 1
 * 6 - 7: 2
 * 8 - 9: 3
 * 10 - 11: 4
