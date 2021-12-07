@@ -1,4 +1,4 @@
-# [Név]
+# Szoták Simon
 
 ## Hogyan kezdj neki?
 
