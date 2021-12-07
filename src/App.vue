@@ -1,7 +1,24 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+   <table>
+      <thead>
+        <tr>
+        <th>Title</th>
+        <th>Price</th>
+        <th>Quantity</th>
+        <th>Operations</th>
+      </tr>
+      </thead>
+      <tbody>
+        <tr v-for="row in rows"
+            v-bind:key="row.title">
+            <td>{{row.title}}</td>
+            <td>{{row.price}}</td>
+            <td>{{row.quantity}}</td>
+        </tr>
+        
+      </tbody>
+    </table>
   </div>
 </template>
 
@@ -10,9 +27,6 @@ import HelloWorld from './components/HelloWorld.vue'
 
 export default {
   name: 'App',
-  components: {
-    HelloWorld
-  },
   data() {
     return {
       rows: [
@@ -38,7 +52,14 @@ export default {
         },
       ]
     }
-  }
+  },
+   methods: {
+    deleteRow(rows){
+      this.rows = this.rows.filter(function(item){
+        return rows.title != item.title
+      })
+    }
+  } 
 }
 </script>
 
